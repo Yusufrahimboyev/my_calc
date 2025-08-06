@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_calc/src/features/home_screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,21 +8,8 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: ListView(
-          children: [
-            for(int i=0;i<20;i++)
-            ListTile(
-              title: Text("hi"),
-            )
-          ],
-        ),
-      ),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: HomeScreen());
   }
 }
